@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoyee Phones & Gadgets</title>
+  <link rel="stylesheet" href="hoyee.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+  <div class="logo">
+    <h2>📱 Hoyee</h2>
+  </div>
+
+  <div class="tab" data-section="cart">
+    <div class="cart-cover">
+    <div class="cart-icon">🛒</div>
+    <p class="total-n" id="cartCount">0</p>
+  </div>
+</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">☰</div>
+
+
+  <nav id="nav">
+    <a href="#" class="tab active" data-section="main">Home</a>
+    <a href="#">Phones</a>
+    <a href="#">Accessories</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="tab-content active" id="main">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Latest Phones & Gadgets</h1>
+      <p>Get quality devices at the best prices</p>
+      <button>Shop Now</button>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-image">
+      <!-- INSERT IMAGE HERE -->
+      <img src="phones-images/hero.png">
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <h2>Categories</h2>
+
+    <div class="category-box">
+      <div>📱 Phones</div>
+      <div>🎧 Accessories</div>
+      <div>⌚ Gadgets</div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section class="phones-section">
+  <h2>Products</h2>
+
+  <div class="phone-categories">
+    <button onclick="filterPhones('all')">All</button>
+    <button onclick="filterPhones('new')">Brand New</button>
+    <button onclick="filterPhones('used')">Nigeria Used</button>
+    <button onclick="filterPhones('uk')">UK Standard</button>
+  </div>
+
+  <div class="product-grid">
+
+    <div class="product" data-category="new">
+
+      <div class="product-img">
+        <img src="phones-images/17pm.png">
+      </div>
+      <button class="cart-btn"
+      data-name="17 pro max"
+          data-price="2500000"
+          data-image="phones-images/17pm.png">🛒</button>
+      <h3>iPhone 17 Pro Max (New)</h3>
+      <p>₦2,500,000</p>
+        </div>
+
+      <div class="product" data-category="new">
+          <div class="product-img">
+        <img src="phones-images/14pm.png">
+      </div>
+      <button class="cart-btn"
+      data-name="14 pro max"
+          data-price="1100000"
+          data-image="phones-images/14pm.png">🛒</button>
+      <h3>iPhone 14 Pro Max (New)</h3>
+      <p>₦1,100,000</p>
+        </div>
+
+        <div class="product" data-category="new">
+          <div class="product-img">
+        <img src="phones-images/s24.png">
+      </div>
+      <button class="cart-btn"
+      data-name="samsung s24 ultra"
+          data-price="1500000"
+          data-image="phones-images/14pm.png">🛒</button>
+      <h3>Samsung S24 ultra (New)</h3>
+      <p>₦1,500,000</p>
+        </div>
+
+        <div class="product" data-category="new">
+          <div class="product-img">
+        <img src="phones-images/airpods.jpg">
+      </div>
+      <button class="cart-btn"
+      data-name="airpods"
+          data-price="100000"
+          data-image="phones-images/airpods.jpg">🛒</button>
+      <h3>Airpods Pro (New)</h3>
+      <p>₦100,000</p>
+        </div>
+
+        <div class="product" data-category="new">
+          <div class="product-img">
+        <img src="phones-images/macbookair.jpg" style="max-width: 300px;">
+      </div>
+      <button class="cart-btn"
+      data-name="macbookair"
+          data-price="1500000"
+          data-image="phones-images/macbookair.jpg">🛒</button>
+      <h3>Mackbook Air (New)</h3>
+      <p>₦1,500,000</p>
+        </div>
+
+        <div class="product" data-category="new">
+          <div class="product-img">
+        <img src="phones-images/beat.jpg">
+      </div>
+      <button class="cart-btn"
+      data-name="beat"
+          data-price="100000"
+          data-image="phones-images/beat.jpg">🛒</button>
+      <h3>Beat Superbass (New)</h3>
+      <p>₦100,000</p>
+        </div>
+
+        <div class="product" data-category="new">
+          <div class="product-img">
+        <img src="phones-images/newpixel.png" style="max-width: 300px">
+      </div>
+      <button class="cart-btn"
+      data-name="google pixel"
+          data-price="2000000"
+          data-image="phones-images/newpixel.png">🛒</button>
+      <h3>Google pixel 10 (New)</h3>
+      <p>₦2,000,000</p>
+        </div>
+
+
+        <div class="product" data-category="used">
+      <div class="product-img">
+        <img src="phones-images/S10E.jpg">
+      </div>
+      <button class="cart-btn"
+      data-name="samsung S10E"
+          data-price="150000"
+          data-image="phones-images/S10E.jpg">🛒</button>
+      <h3>Samsung S10E (Used)</h3>
+      <p>₦150,000</p>
+        </div>
+
+    <div class="product" data-category="used">
+      <div class="product-img">
+        <img src="phones-images/S22.jpg" style="max-width: 300px">
+      </div>
+      <button class="cart-btn"
+      data-name="samsung S22"
+          data-price="300000"
+          data-image="phones-images/S22.jpg">🛒</button>
+      <h3>Samsung S22 (Used)</h3>
+      <p>₦300,000</p>
+        </div>
+
+        <div class="product" data-category="used">
+      <div class="product-img">
+        <img src="phones-images/12pm.jpg">
+      </div>
+      <button class="cart-btn"
+      data-name="samsung S10E"
+          data-price="350000"
+          data-image="phones-images/12pm.jpg">🛒</button>
+      <h3>iPhone 12 Pro Max (Used)</h3>
+      <p>₦350,000</p>
+        </div>
+  
+
+    <div class="product" data-category="uk">
+      <div class="product-img">
+        <img src="phones-images/16.jpg">
+      </div>
+      <button class="cart-btn"
+      data-name="iphone 16 (uk)"
+          data-price="1000000"
+          data-image="phones-images/16.jpg">🛒</button>
+      <h3>iPhone 16 (Uk)</h3>
+      <p>₦1,000,000</p>
+    </div>
+
+    <div class="product" data-category="uk">
+      <div class="product-img">
+        <img src="phones-images/pixel.jpg" style="max-width: 300px">
+      </div>
+      <button class="cart-btn"
+      data-name="google pixel (uk)"
+          data-price="1000000"
+          data-image="phones-images/pixel.jpg">🛒</button>
+      <h3>Google pixel (Uk)</h3>
+      <p>₦1,000,000</p>
+    </div>
+
+
+  </div>
+</section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+      <div class="product">
+        <div class="product-img">
+          <img src="phones-images/13group.jpg">
+        </div>
+        <h3>iPhone 13</h3>
+        <p>₦500,000</p>
+      </div>
+
+      <div class="product">
+        <div class="product-img">
+          <img src="phones-images/iwatchgroup.jpg">
+        </div>
+        <h3>Apple Watch 11</h3>
+        <p>₦150,000</p>
+      </div>
+
+      <div class="product">
+        <div class="product-img">
+          <img src="phones-images/17group.jpg">
+        </div>
+        <h3>iPhone 17</h3>
+        <p>₦2,500,000</p>
+      </div>
+
+      <div class="product">
+        <div class="product-img">
+          <img src="phones-images/featured.jpg">
+        </div>
+        <h3> All iPhone Series</h3>
+        <p>From ₦80,000</p>
+      </div>
+
+    </div>
+  </section>
+
+<div class="mid-body">
+  <div class="body-pic">
+  <img src="phones-images/back.png">
+</div>
+  <div class="body-text">
+  <h1>Get the best deals from us</h1>
+</div>
+</div>
+
+<!-- WHY US -->
+  <section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <p>✔ Affordable Prices | ✔ Original Products | ✔ Fast Delivery</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Hoyee Phones & Gadgets</p>
+  </footer>
+
+  <div class="social-links">
+<a href="wa.link/siu5xd" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</section>
+
+</main>
+
+<section class="tab-content" id="cart">
+
+  <div class="cart">
+  <h3>Items in Your Cart</h3>
+  <ul class="cart-id" id="cart-items"></ul>
+  <p id="total">Total: ₦0</p>
+  <button onclick="checkout()">Checkout</button>
+
+  <marquee><p>You will be redirected to our Customer Service agent via whatsapp for immediate order placement.</p></marquee>
+</div>
+
+
+
+<!-- WHY US -->
+  <section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <p>✔ Affordable Prices | ✔ Original Products | ✔ Fast Delivery</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Hoyee Phones & Gadgets</p>
+  </footer>
+
+  <div class="social-links">
+<a href="wa.link/siu5xd" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</section>
+
+  
+
+<a href="https://wa.me/234XXXXXXXXXX" class="whatsapp" target="_blank">
+  💬
+</a>
+
+<script type="text/javascript" src="hoyee.js"></script>
+</body>
+</html>
