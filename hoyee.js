@@ -47,6 +47,29 @@ function toggleMenu() {
   };
 };
 
+
+// === to overlay cart page === // 
+
+const cartBtn = document.querySelector(".cart-icon");
+const cartPage = document.querySelector(".cart");
+
+let overlay = document.createElement("div");
+overlay.classList.add("cart-overlay");
+document.body.appendChild(overlay);
+
+cartBtn.addEventListener("click", () => {
+  cartPage.classList.toggle("show");
+  overlay.classList.toggle("show");
+  document.body.style.overflow = "hidden";
+});
+
+// click outside to close
+overlay.addEventListener("click", () => {
+  cartPage.classList.remove("show");
+  overlay.classList.remove("show");
+  document.body.style.overflow = "auto";
+});
+
 // === for cart === //
 
 let cart = [];
@@ -90,10 +113,6 @@ function updateCart() {
 
 }
 
-  if (cart.length === 0) {
-  cartItems.innerHTML = "<h3>Your cart is empty, please add item to cart.</h3>";
-}
-
 
 function checkout() {
 
@@ -102,17 +121,19 @@ function checkout() {
     return;
   }
 
-  let message = "Hello, I want to order:\n\n";
+  let message = "🛒 *Hoyee Phones & Gadgets Order* \n\n";
 
   cart.forEach((item, index) => {
     message += `${index + 1}. ${item.name} - ₦${item.price.toLocaleString()}\n`;
   });
 
-  message += `\nTotal: ₦${total.toLocaleString()}`;
+  message += `\n 📍Store Pickup or Delivery Location: \n`;
+  message += `📞 Phone Number: \n`;
+  message += `\n 💰 *Total: ₦${total.toLocaleString()}`;
 
   let phone = "2349168671007"; // 
 
-  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}*`;
 
   window.open(url, "_blank");
 }
