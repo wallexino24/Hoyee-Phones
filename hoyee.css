@@ -27,7 +27,7 @@ body {
   padding: 15px 40px;
   align-items: center;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 1.2);
 }
 
@@ -102,8 +102,8 @@ nav a:hover {
 }
 
 .tab-content {
-  opacity: 0;
-  max-height: 0;
+  opacity: 1;
+  max-height: none;
   transform: translate(10px);
   transition: all 0.5s ease;
 }
@@ -319,25 +319,54 @@ button:hover {
   transform: translateY(-5px);
 }
 
-
 .cart {
-  bottom: 20px;
-  background: black;
+  position: fixed;
+  top: 0;
+  top: 70px;
+  right: -100%;
+  width: 500px;
+  height: 100vh;
+  background: #000;
   color: white;
-  padding: 15px;
-  font-size: 20px;
-  padding-top: 0;
-  text-decoration: none;
-  justify-content: space-between;
-  min-height: 100vh;
-  max-height: 2000px;
+  padding: 20px;
+  z-index: 2000;
+  transition: right 0.4s ease;
   overflow-y: auto;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.8);
 }
+
+.cart.show {
+  right: 0;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 1500;
+}
+
+.cart-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
 
 .cart-id {
   border: 1px solid grey;
   border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 20px;
 }
+
 
 #cart-items li {
   display: flex;
@@ -509,6 +538,13 @@ footer {
     margin: 5px;
     text-align: center;
   }
+
+  .cart {
+  position: fixed;
+  top: 60px;
+  width: 300px;
+}
+
 
 
 
