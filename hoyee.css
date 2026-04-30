@@ -130,6 +130,7 @@ nav a:hover {
 .hero-text {
   flex: 1;
   max-width: 400px;
+  margin: 10px;
 }
 
 .hero-text h1 {
@@ -328,6 +329,9 @@ button:hover {
   padding-top: 0;
   text-decoration: none;
   justify-content: space-between;
+  min-height: 100vh;
+  max-height: 2000px;
+  overflow-y: auto;
 }
 
 .cart-id {
